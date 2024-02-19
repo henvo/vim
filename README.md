@@ -1,5 +1,6 @@
 ### Prerequisites
 * git
+* ripgrep
 * FZF
 
 ### Installation

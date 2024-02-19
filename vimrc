@@ -34,3 +34,7 @@ set t_Co=256
 
 " Plugin settings
 let g:ale_virtualtext_cursor = 'disabled'
+
+" Mappings
+nnoremap <Leader>f :Files<cr>
+nnoremap <Leader>r :Rg<cr>

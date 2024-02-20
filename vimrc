@@ -38,3 +38,8 @@ let g:ale_virtualtext_cursor = 'disabled'
 " Mappings
 nnoremap <Leader>f :Files<cr>
 nnoremap <Leader>r :Rg<cr>
+nnoremap <Leader>e :Ex<cr>
+
+if executable('fd')
+  let $FZF_DEFAULT_COMMAND = 'fd --type f --color=always'
+endif

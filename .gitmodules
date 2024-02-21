@@ -16,6 +16,3 @@
 [submodule "pack/plugins/start/vim-go"]
 	path = pack/plugins/start/vim-go
 	url = git@github.com:fatih/vim-go.git
-[submodule "pack/plugins/start/vim-airline"]
-	path = pack/plugins/start/vim-airline
-	url = git@github.com:vim-airline/vim-airline

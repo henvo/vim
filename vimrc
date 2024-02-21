@@ -23,6 +23,7 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 set updatetime=100
+set belloff=all
 
 let g:mapleader = ","
 
@@ -41,5 +42,5 @@ nnoremap <Leader>r :Rg<cr>
 nnoremap <Leader>e :Ex<cr>
 
 if executable('fd')
-  let $FZF_DEFAULT_COMMAND = 'fd --type f --color=always'
+  let $FZF_DEFAULT_COMMAND = 'fd --type f --hidden --exclude .git'
 endif

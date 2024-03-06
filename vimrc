@@ -11,11 +11,12 @@ filetype plugin indent on
 
 set nu
 set smartindent
+set ignorecase
 set smartcase
 set noswapfile
 set nobackup
 set encoding=utf-8
-set wrap
+set nowrap
 set textwidth=79
 set formatoptions=tcqrn1
 set tabstop=2
@@ -41,6 +42,5 @@ nnoremap <Leader>f :Files<cr>
 nnoremap <Leader>r :Rg<cr>
 nnoremap <Leader>e :Ex<cr>
 
-if executable('fd')
-  let $FZF_DEFAULT_COMMAND = 'fd --type f --hidden --exclude .git'
-endif
+" Needed in order to not search file names when grepping.
+command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)

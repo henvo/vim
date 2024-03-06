@@ -2,7 +2,6 @@
 * git
 * ripgrep
 * FZF
-* fd (find-fd)
 
 ### Installation
 

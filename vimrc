@@ -34,6 +34,10 @@ colorscheme everforest
 set colorcolumn=80
 set t_Co=256
 
+" Status line
+set statusline+=%f
+set laststatus=2
+
 " Plugin settings
 let g:ale_virtualtext_cursor = 'disabled'
 
@@ -42,5 +46,5 @@ nnoremap <Leader>f :Files<cr>
 nnoremap <Leader>r :Rg<cr>
 nnoremap <Leader>e :Ex<cr>
 
-" Needed in order to not search file names when grepping.
+" Needed in order to not search file names when grepping with ripgrep.
 command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)

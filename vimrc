@@ -47,4 +47,4 @@ nnoremap <Leader>r :Rg<cr>
 nnoremap <Leader>e :Ex<cr>
 
 " Needed in order to not search file names when grepping with ripgrep.
-command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
+command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading -g '!node_modules' --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)

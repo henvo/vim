@@ -25,6 +25,8 @@ set softtabstop=2
 set expandtab
 set updatetime=100
 set belloff=all
+set hlsearch
+set incsearch
 
 let g:mapleader = ","
 

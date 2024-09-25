@@ -3,6 +3,11 @@
 * ripgrep
 * FZF
 
+``` bash
+# On Ubuntu/Debian
+apt install git ripgrep fzr
+```
+
 ### Installation
 
 ``` bash

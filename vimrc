@@ -13,7 +13,6 @@ set nu
 set smartindent
 set ignorecase
 set smartcase
-set noswapfile
 set nobackup
 set encoding=utf-8
 set nowrap
@@ -27,6 +26,12 @@ set updatetime=100
 set belloff=all
 set hlsearch
 set incsearch
+
+" speed improvements
+set lazyredraw
+set ttyfast
+set noswapfile
+set undolevels=100
 
 let g:mapleader = ","
 
@@ -47,6 +52,7 @@ let g:ale_virtualtext_cursor = 'disabled'
 nnoremap <Leader>f :Files<cr>
 nnoremap <Leader>r :Rg<cr>
 nnoremap <Leader>e :Ex<cr>
+nnoremap <ESC><ESC> :nohlsearch<CR>
 
 " Needed in order to not search file names when grepping with ripgrep.
 command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading -g '!node_modules' --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)

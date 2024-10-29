@@ -5,7 +5,10 @@
 
 ``` bash
 # On Ubuntu/Debian
-apt install git ripgrep fzr
+apt install git ripgrep fzf
+
+# On Mac (brew)
+brew install ripgrep fzf
 ```
 
 ### Installation
